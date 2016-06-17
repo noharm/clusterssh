@@ -73,6 +73,8 @@ my %default_config = (
     ssh_args     => "",
     sftp         => 'sftp',
     sftp_args    => "",
+    ipmi          => 'ipmitool',
+    ipmi_args     => "-Ilanplus sol activate",
 
     extra_tag_file           => '',
     extra_cluster_file       => '',
@@ -119,7 +121,7 @@ sub new {
     $comms = 'sftp'    if ( $comms eq 'sftp' );
 
     # list of allowed comms methods
-    if ( 'ssh rsh telnet sftp console' !~ m/\b$comms\b/ ) {
+    if ( 'ssh rsh telnet sftp console ipmi' !~ m/\b$comms\b/ ) {
         $self->{comms} = 'ssh';
     }
     else {

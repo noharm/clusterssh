@@ -81,13 +81,18 @@ sub script {
                }
            }
            if(\$user) {
-               unless("$comms" eq "telnet") {
+               if ("$comms" eq "ipmitool") {
+                   \$user = "-U \$user ";
+                   \$command .= \$user;
+               } elsif("$comms" ne "telnet") {
                    \$user = \$user ? "-l \$user " : "";
                    \$command .= \$user;
                }
            }
            if("$comms" eq "telnet") {
                \$command .= "\$svr \$port";
+           } elsif("$comms" eq "ipmitool") {
+               \$command .= "-H \$svr";
            } else {
                if (\$port) {
                    \$command .= "-p \$port \$svr";
