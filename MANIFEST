@@ -7,6 +7,7 @@ bin_PL/cscp.x
 bin_PL/csftp
 bin_PL/cssh
 bin_PL/ctel
+bin_PL/cipmi
 Build.PL
 Changes
 lib/App/ClusterSSH/Base.pm
