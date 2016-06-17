@@ -33,7 +33,8 @@ WriteMakefile
                    'bin/crsh',
                    'bin/csftp',
                    'bin/cssh',
-                   'bin/ctel'
+                   'bin/ctel',
+                   'bin/cipmi'
                  ],
   'PL_FILES' => {
                   'bin_PL/_build_docs' => [

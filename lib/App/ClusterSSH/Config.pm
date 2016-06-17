@@ -73,8 +73,8 @@ my %default_config = (
     ssh_args     => "",
     sftp         => 'sftp',
     sftp_args    => "",
-    ipmi          => 'ipmitool',
-    ipmi_args     => "-Ilanplus sol activate",
+    ipmi         => 'ipmitool',
+    ipmi_args    => "-Ilanplus sol activate",
 
     extra_tag_file           => '',
     extra_cluster_file       => '',

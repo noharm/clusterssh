@@ -84,6 +84,8 @@ Readonly::Hash my %default_config => {
     ssh_args     => "",
     sftp         => 'sftp',
     sftp_args    => "",
+    ipmi         => 'ipmitool',
+    ipmi_args    => "-Ilanplus sol activate",
 
     extra_tag_file           => "",
     extra_cluster_file       => "",
@@ -543,6 +545,8 @@ extra_cluster_file=
 extra_tag_file=
 history_height=10
 history_width=40
+ipmi=ipmitool
+ipmi_args=-Ilanplus sol activate
 key_addhost=Control-Shift-plus
 key_clientname=Alt-n
 key_history=Alt-h
